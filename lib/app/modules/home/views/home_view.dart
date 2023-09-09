@@ -45,7 +45,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text('Data Mahasiswa'),
         centerTitle: true,
         actions: [
           IconButton(
@@ -89,11 +89,11 @@ class HomeView extends GetView<HomeController> {
               itemBuilder: (context, index) => ListTile(
                   leading: CircleAvatar(
                     child: Text('${index + 1}'),
-                    backgroundColor:Colors.white ),
+                    backgroundColor:Color.fromARGB(255, 209, 195, 0) ),
                 title: Text(
-                    "${(listAllDocs[index].data() as Map<String, dynamic>)["name"]}"),
+                    "${(listAllDocs[index].data() as Map<String, dynamic>)["Nama"]}"),
                 subtitle: Text(
-                    "${(listAllDocs[index].data() as Map<String, dynamic>)["price"]}"),
+                    "${(listAllDocs[index].data() as Map<String, dynamic>)["Npm"]}"),
                     trailing: IconButton(
                       onPressed: () => showOption(listAllDocs[index].id), 
                       icon: Icon(Icons.more_vert),
